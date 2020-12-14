@@ -39,7 +39,7 @@ let requeteApi = function (url) {
 
       nounoursaffichage.innerHTML = '<div class="cadre-nounours id="couleur_ted"><figure>\
       <img src = " ' + parsenounours.imageUrl + ' " class="image-nounours"> \
-      <figcaption><p>' + parsenounours.name + ' <br> Prix :<span> <strong>' + parsenounours.price/100 + ' €</strong></span></p>\
+      <figcaption><p>' + parsenounours.name + '<br><p>Ref: <span class="ref" > '+ parsenounours._id +' </span></p>Prix :<span class="prix" > <strong>' + parsenounours.price/100 + ' €</strong></span></p>\
       <form><p>Couleur</p>\
       <select id="couleur">\
       </select> <p><br>Quantité:</p>\
@@ -117,7 +117,7 @@ let requeteApi = function (url) {
      
         localStorage.setItem("panier", JSON.stringify(nounours_article));
        
-        nounoursaffichage.innerHTML = '<div class="cadre-nounours id="couleur_ted">Votre article est bien ajouté! <br>\
+        nounoursaffichage.innerHTML = '<div class="cadre-nounours-valid" id="couleur_ted">Votre article est bien ajouté! <br>\
         <br> Voulez-vous poursuivre vos achats? <br>\
        <form action="./index.html"> <input type="submit" class="choix_oui" value="oui"></form> <form action="./panier.html"> <input type="submit" class="choix_non" value="non"></form></div>';
      affichagenounours.appendChild(nounoursaffichage);

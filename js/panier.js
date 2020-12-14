@@ -139,6 +139,7 @@ let nom = document.getElementById('nom');
 let nomabsent = document.getElementById('nomabsent');
 let nomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 let prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+let mailValid = /^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/;
 
 confirm_bouton.addEventListener("click",function(event){
     //Il n'y a aucune valeur dans le champ (nom)
@@ -164,6 +165,12 @@ confirm_bouton.addEventListener("click",function(event){
           prenomabsent.textContent = 'Format incorrect';
           prenomabsent.style.color = 'red';
         
+       //la valeurs est incorrect
+        }else if (mailValid.test(mail.value) == false){
+          event.preventDefault();
+          mailabsent.textContent = 'Format incorrect';
+          mailabsent.style.color = 'red';
+        
          //Il n'y a aucune valeur dans le champ (mail)
         }else if (mail.validity.valueMissing ){
           event.preventDefault();
@@ -176,11 +183,13 @@ confirm_bouton.addEventListener("click",function(event){
           adresseabsent.textContent = '! Requis';
           adresseabsent.style.color = 'red';
 
-         //Il n'y a aucune valeur dans le champ (ville)
+        //Il n'y a aucune valeur dans le champ (ville)
        }else if (ville.validity.valueMissing ){
-            event.preventDefault();
-            villeabsent.textContent = '! Requis';
-            villeabsent.style.color = 'red';
+        event.preventDefault();
+        villeabsent.textContent = '! Requis';
+        villeabsent.style.color = 'red';
+         
+        
     }else{ 
          
       let recup_input = document.getElementsByTagName('input');
