@@ -15,6 +15,11 @@
      color: white;
  }
 
+ a:hover{
+    text-decoration: none;
+    color: white;
+}
+
  body{
      max-width: 1440px;
      width: 100%;
@@ -92,6 +97,7 @@ footer p{
 
 }
 
+
 @keyframes logo-opacity{
     from{
        opacity: 0;
@@ -108,8 +114,15 @@ footer p{
    font-size: 1.1em;
 }
 
-.cadre-nounours span{
+.cadre-nounours .prix{
     color: rgb(253, 191, 21);
+ }
+
+ .cadre-nounours .ref{
+
+    font-size: 0.9em;
+    color: #ffd6a8;
+
  }
 
 .image-nounours{
@@ -119,6 +132,20 @@ footer p{
     margin: auto;
     text-align: center;
     width: 90%;
+}
+
+.cadre-nounours-valid{
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    width: 85%;
+    border-radius: 10px;
+    color: white;
+    background: rgb(126, 125, 125);
+    margin-bottom: 30px;
+
 }
 
 @media all and (min-width: 740px){
