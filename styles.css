@@ -1,0 +1,282 @@
+ /* reset */
+
+ html,body{
+     overflow-x: hidden;
+     margin: 0;
+     padding: 0;
+ }
+
+ *{
+     box-sizing: border-box;
+ }
+
+ a{
+     text-decoration: none;
+     color: white;
+ }
+
+ header{
+    -webkit-box-shadow:  -2px 13px 15px -13px rgba(0,0,0,0.94); 
+    box-shadow:  -2px 13px 15px -13px rgba(0,0,0,0.94);
+ }
+
+ main{
+     min-height: 100vh;
+     margin-top: 30px;
+    
+     animation: logo-top 1s ;
+    
+ }
+
+ 
+
+ header img{
+     border-radius: 5px;
+    width: 100px;
+}
+
+@keyframes logo-top{
+    from{margin-top: 90px;
+      ;
+    }
+    to{margin-top: 30px;
+        }
+}
+
+
+.fa-shopping-cart{
+    font-size: 0.55em;
+    margin-left: 30px;
+    padding-top: 20px;
+    color:white;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.mentions{
+    padding: 20px;
+    text-align: center;
+}
+
+.mentions h2{
+    font-size: 1.2em;
+}
+
+.cadre-nounours{
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    border-radius: 10px;
+    color: white;
+    background: rgb(126, 125, 125);
+    margin-bottom: 30px;
+    animation: logo-opacity 1s ;
+
+}
+
+@keyframes logo-opacity{
+    from{
+       opacity: 0;
+    }
+    to{
+        opacity: 1;}
+}
+
+.cadre-nounours a:hover, .cadre-nounours a:focus{
+    opacity: 0.4;
+}
+
+.cadre-nounours p{
+   font-size: 1.1em;
+}
+
+.cadre-nounours span{
+    color: rgb(253, 191, 21);
+ }
+
+.image-nounours{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top:20px;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+main h1{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: logo-opacity 5s ;
+}
+
+.ajout-panier{
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    margin: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    background: rgb(202, 123, 83);
+    border-radius: 10px;
+    border: none;
+    transition: all 600ms ;
+}
+
+.ajout-panier:hover{
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    background: rgb(147, 93, 238);
+    transition: all 600ms ;
+}
+
+.choix_oui{
+    width: 100px;
+    background: #4cf34c;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.choix_oui:hover{
+    background: #bcf1bc;
+    -webkit-box-shadow: 0px 7px 10px 1px #000000; 
+    box-shadow: 0px 7px 10px 1px #000000;
+    font-weight: 400;
+}
+
+.choix_non{
+    background: #f55353;
+    width: 100px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 15px 1px #000000; 
+    box-shadow: 0px 7px 15px 1px #000000;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.choix_non:hover{
+    background: #ee9999;
+    -webkit-box-shadow: 0px 7px 10px 1px #000000; 
+    box-shadow: 0px 7px 10px 1px #000000;
+    font-weight: 400;
+}
+
+table{
+    width: 100%;
+    
+    
+}
+
+table td{
+    border-top: 2px solid #999999;
+    padding-top:10px ;
+    padding-bottom:10px ;
+    width: 20%;
+}
+
+.image-panier{
+    width: 70px;
+}
+
+.panier_plein_p{
+    background: #eebebe;
+    font-weight: 600;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+button{
+    border-radius: 50%;
+    font-weight: 600;
+    color: white;
+    background: rgb(253, 54, 54);
+    border: none;
+    -webkit-box-shadow: 0px 2px 10px 1px #000000; 
+    box-shadow: 0px 2px 10px 1px #000000;  
+}
+
+button:hover{
+    
+    color: black;
+    background: rgb(245, 154, 154);
+    -webkit-box-shadow: 0px 2px 10px 1px #535252; 
+    box-shadow: 0px 2px 10px 1px #535252;  
+}
+
+table td > a{
+    color: black;
+}
+
+hr{
+    width: 40px;
+    margin-left: 0;
+    color: rgb(202, 123, 83);
+     background-color: rgb(202, 123, 83); 
+     height:3px; 
+     border:0;
+}
+
+h1 p{
+    width: 20px;
+    height: 20px;
+    background: red ;
+    text-align: center;
+    font-size: 0.4em;
+    color: white;
+    margin-left: 162px;
+    margin-top: -20px;
+    border-radius: 50%;
+}
+
+#shop{
+    color: magenta;
+}
+
+#formulaire{
+    max-width: 500px ;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: #e7e5e5;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+#formulaire input{
+    margin-bottom: 20px;
+}
+
+#formulaire label{
+    font-weight: 600;
+}
+
+.confirm{
+    
+    background: #e7e5e5;
+    text-align: center;
+    padding: 20px;
+}
+
