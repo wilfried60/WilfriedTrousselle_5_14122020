@@ -29,7 +29,7 @@ ourson.forEach(tableaunounours);
 function tableaunounours(nounours){
 
 const nounoursaffichage = document.createElement('article');
-nounoursaffichage.innerHTML = '<div class="cadre-nounours"> <a href="./products.html?id='+ nounours._id +'" <figure>\
+nounoursaffichage.innerHTML = '<div class="cadre-nounours" > <a href="./products.html?id='+ nounours._id +'" <figure>\
 <img src = " ' + nounours.imageUrl + ' " class="image-nounours"> \
 <figcaption><p>' + nounours.name + ' <br> Prix :<span> <strong>' + nounours.price/100 + ' €</strong></span></p></figcaption>\
 </figure></a></div>';
