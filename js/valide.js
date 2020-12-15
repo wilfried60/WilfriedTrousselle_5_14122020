@@ -1,6 +1,4 @@
-// on suprimme le panier en localStorage
 
-localStorage.removeItem('panier');
 
 // affichage nombre d'article dans le panier sur le l'icon panier
 
