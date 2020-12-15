@@ -2,7 +2,6 @@
   let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
   if (couleur_du_panier === null || couleur_du_panier === "undefined"){
     couleur_du_panier = [];
-    alert("Un problème dans localStorage est survenue, veuillez réessayer plus tard");
   }else{
   }
   couleur_du_panier.forEach(function(nounours, index) {
