@@ -1,6 +1,5 @@
 
 let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
-
 const affichagenounours = document.getElementById('nounours');
 const search_params = new URLSearchParams(window.location.search); 
 const id = search_params.get('id');
@@ -85,7 +84,7 @@ let requeteApi = function (url) {
         if ( nounours_article === null || nounours_article === "undefined") {
           nounours_article = [];
         } 
-        var nouveau_produit = true;
+        let nouveau_produit = true;
        
         // vérifie si le produit n'est pas dans le panier
         nounours_article.forEach(function(prod) {
@@ -113,7 +112,7 @@ let requeteApi = function (url) {
           prix_total : parsenounours.price/100 * document.getElementById("qte").value,
           key_id: parsenounours.id }
           );
-      }
+      } 
      
         localStorage.setItem("panier", JSON.stringify(nounours_article));
        
@@ -124,7 +123,7 @@ let requeteApi = function (url) {
 
         
       }else{
-        alert("Un probleme avec local storage est survenue");
+        alert("Un probleme est survenue");
         
       }
     });

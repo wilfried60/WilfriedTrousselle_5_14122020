@@ -2,6 +2,7 @@
   let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
   if (couleur_du_panier === null || couleur_du_panier === "undefined"){
     couleur_du_panier = [];
+    alert("Un problème dans localStorage est survenue, veuillez réessayer plus tard");
   }else{
   }
   couleur_du_panier.forEach(function(nounours, index) {
@@ -15,6 +16,8 @@
    <td style="text-align:right"><button id="'+ index +'-'+ nounours.id +'">X</button><td>\
   </tr></table>';
   affichage_du_panier.appendChild(nounoursaffichage);
+
+  console.log(nounours);
    
 // récupération du clic sur la croix (supprimer)
 let sup = document.getElementById(index +'-'+ nounours.id);
@@ -233,7 +236,7 @@ let products = [];
         body: JSON.stringify(classement_donnees),
     });
    
-    // affichage de la reponse
+    // affichage de la reponse 
     promise.then(async response => {
      
      console.log(response);

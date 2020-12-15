@@ -48,6 +48,25 @@ console.log(confirm_commande);
 let prix_total = JSON.parse(localStorage.getItem('prixtotal'));
 console.log(prix_total);
 
+if (confirm_commande === null || confirm_commande === "undefined"){
+  
+  let confirmation = document.getElementById('confirmation');
+let confirm_p = document.createElement('p');
+
+confirm_p.innerHTML = 'Vous n\'avez pas de commande en cours';
+
+confirmation.append(confirm_p);
+
+} else if (prix_total === null || prix_total === "undefined") {
+         
+  let confirmation = document.getElementById('confirmation');
+  let confirm_p = document.createElement('p');
+  
+  confirm_p.innerHTML = 'Vous n\'avez pas de commande en cours';
+  
+  confirmation.append(confirm_p);
+
+}else{
 let confirmation = document.getElementById('confirmation');
 let confirm_p = document.createElement('p');
 
@@ -57,7 +76,7 @@ confirm_p.innerHTML = 'Votre commande n°:<strong> '+ confirm_commande +'</stron
 confirmation.append(confirm_p);
 
 
-
+}
 
 
 // on vide le localStorage

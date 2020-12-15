@@ -16,14 +16,14 @@ request.onload = function() {
 
     }
     else{
-        alert("Impossible d'utiliser localStorage");
+        alert("Une erreur est survenue");
     }
 };
 
 // affichage des résultats dans la page index.html
 
 function tableauourson(){
-ourson.forEach(tableaunounours);
+ourson.forEach(tableaunounours); 
 }
 
 function tableaunounours(nounours){
@@ -58,7 +58,7 @@ if (couleur_du_panier === null || couleur_du_panier === "undefined"){
   
     
   Compteur.prototype.ajouter = function() {
-    couleur_du_panier.forEach(function(element) {
+    couleur_du_panier.forEach(function() {
       ++this.nb_article;
     },  this);
   };
