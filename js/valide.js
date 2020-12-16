@@ -1,10 +1,6 @@
-
-
-// affichage nombre d'article dans le panier sur le l'icon panier
+// affichage nombre d'article dans le panier sur l'icone panier
 
 let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
-
-// affichage nombre d'article dans le panier sur le l'icon panier
 
 let nombre_dans_panier = document.getElementById('nb_panier');
   const nb_Panier = document.createElement('p');

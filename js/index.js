@@ -37,7 +37,7 @@ nounoursaffichage.innerHTML = '<div class="cadre-nounours" > <a href="./products
 affichagenounours.appendChild(nounoursaffichage);
 }
 
-// affichage nombre d'article dans le panier sur le l'icon panier
+// affichage nombre d'article dans le panier sur l'icone panier
 
 let nombre_dans_panier = document.getElementById('nb_panier');
   const nb_Panier = document.createElement('p');
