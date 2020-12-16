@@ -25,7 +25,7 @@ if (couleur_du_panier === null || couleur_du_panier === "undefined"){
   
     
   Compteur.prototype.ajouter = function() {
-    couleur_du_panier.forEach(function(element) {
+    couleur_du_panier.forEach(function() {
       ++this.nb_article;
     },  this);
   };
