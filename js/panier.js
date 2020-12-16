@@ -9,7 +9,7 @@
   const nounoursaffichage = document.createElement('article');
   nounoursaffichage.innerHTML = '<table><tr>\
   <td><a href="./products.html?id='+ nounours.id +'">' + nounours.name + '<hr>' + nounours.couleur + '</a></td>\
-  <td><a href="./products.html?id='+ nounours.id +'"> <img src = " ' + nounours.image + ' " class="image-panier"></a></td> \
+  <td><a href="./products.html?id='+ nounours.id +'"> <img src = " ' + nounours.image + ' " class="image-panier" alt="' + nounours.name + ' "></a></td> \
   <td style="text-align:right"><a href="./products.html?id='+ nounours.id +'">Qté<br> <strong>' + nounours.quantite + ' </strong></a></td>\
    <td style="text-align:right"><a href="./products.html?id='+ nounours.id +'">Prix<br> <strong>' + nounours.prix * nounours.quantite + ' €</strong></a></td>\
    <td style="text-align:right"><button id="'+ index +'-'+ nounours.id +'">X</button><td>\

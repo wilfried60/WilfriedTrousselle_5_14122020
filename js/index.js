@@ -30,7 +30,7 @@ function tableaunounours(nounours){
 
 const nounoursaffichage = document.createElement('article');
 nounoursaffichage.innerHTML = '<div class="cadre-nounours" > <a href="./products.html?id='+ nounours._id +'" <figure>\
-<img src = " ' + nounours.imageUrl + ' " class="image-nounours"> \
+<img src = " ' + nounours.imageUrl + ' " class="image-nounours" alt="' + nounours.name + ' " /> \
 <figcaption><p>Ref: <span class="ref" > '+ nounours._id +' </span></p><p>' + nounours.name + ' <br> Prix :<span class="prix" > <strong>' + nounours.price/100 + ' €</strong></span></p></figcaption>\
 </figure></a></div>';
 

@@ -37,7 +37,7 @@ let requeteApi = function (url) {
    const nounoursaffichage = document.createElement('article');
 
       nounoursaffichage.innerHTML = '<div class="cadre-nounours id="couleur_ted"><figure>\
-      <img src = " ' + parsenounours.imageUrl + ' " class="image-nounours"> \
+      <img src = " ' + parsenounours.imageUrl + ' " class="image-nounours" alt="' + parsenounours.name + ' " > \
       <figcaption><p>' + parsenounours.name + '<br><p>Ref: <span class="ref" > '+ parsenounours._id +' </span></p>Prix :<span class="prix" > <strong>' + parsenounours.price/100 + ' €</strong></span></p>\
       <form><p>Couleur</p>\
       <select id="couleur">\
