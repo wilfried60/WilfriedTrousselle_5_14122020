@@ -1,41 +1,6 @@
-// affichage nombre d'article dans le panier sur l'icone panier
+// on définie la variable pour le compteur panier (compteur.js);
 
 let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
-
-let nombre_dans_panier = document.getElementById('nb_panier');
-  const nb_Panier = document.createElement('p');
-
-if (couleur_du_panier === null || couleur_du_panier === "undefined"){
-  
-  nb_Panier.innerHTML = "0";
-  
-  nombre_dans_panier.appendChild(nb_Panier);
-
-}else{
- 
-  class Compteur {
-    constructor() {
-      this.nb_article = 0;
-    }
-  }
-  
-    
-  Compteur.prototype.ajouter = function() {
-    couleur_du_panier.forEach(function() {
-      ++this.nb_article;
-    },  this);
-  };
-  
-  var obj = new Compteur();
-  obj.ajouter([]);
-  console.log(obj.nb_article);  
-  
-  nb_Panier.innerHTML = obj.nb_article;
-  
-  nombre_dans_panier.appendChild(nb_Panier);
-      
-  
-}
 
 // on affiche la confirmation de commande
 
@@ -53,15 +18,6 @@ confirm_p.innerHTML = 'Vous n\'avez pas de commande en cours';
 
 confirmation.append(confirm_p);
 
-} else if (prix_total === null || prix_total === "undefined") {
-         
-  let confirmation = document.getElementById('confirmation');
-  let confirm_p = document.createElement('p');
-  
-  confirm_p.innerHTML = 'Vous n\'avez pas de commande en cours';
-  
-  confirmation.append(confirm_p);
-
 }else{
 let confirmation = document.getElementById('confirmation');
 let confirm_p = document.createElement('p');
@@ -78,3 +34,4 @@ confirmation.append(confirm_p);
 // on vide le localStorage
 
 localStorage.clear();
+

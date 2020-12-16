@@ -99,24 +99,19 @@ valid.addEventListener("click",() => {
    form_create.innerHTML = '<div id="formulaire" >\
    \
   <label for="nom">Nom:</label><br>\
-  <input type="text class="text" name="nom" id="nom" required>\
-  <span id="nomabsent"></span><br>\
+  <input type="text class="text" name="nom" id="nom" placeholder="" required><br>\
   \
   <label for="Prenom">Prénom:</label><br>\
-  <input type="text class="text" name="prenom" id="prenom" required>\
-  <span id="prenomabsent"></span><br>\
+  <input type="text class="text" name="prenom" id="prenom" required><br>\
   \
   <label for="email">Email :</label><br>\
-  <input type="email" class="text" name="email" id="mail" required>\
-  <span id="mailabsent"></span><br>\
+  <input type="email" class="text" name="email" id="mail" required><br>\
   \
   <label for="adresse">Adresse :</label><br>\
-  <input type="text" class="text" name="adresse" id="adresse" required>\
-  <span id="adresseabsent"></span><br>\
+  <input type="text" class="text" name="adresse" id="adresse" required><br>\
   \
   <label for="ville">Ville :</label><br>\
-  <input type="text" class="text" name="adresse" id="ville" required>\
-  <span id="villeabsent"></span><br>\
+  <input type="text" class="text" name="adresse" id="ville" required><br>\
   \
   <button class="ajout-panier" id="envoi" value="Confirmer_mon_achat">Confirmer mon achat</button>\
   \
@@ -128,17 +123,13 @@ text_validation.innerHTML = '';
   form.append(form_create);
 
   // validation du formulaire 
+
 let ville = document.getElementById('ville');
-let villeabsent = document.getElementById('villeabsent');
 let adresse = document.getElementById('adresse');
-let adresseabsent = document.getElementById('adresseabsent');
 let mail = document.getElementById('mail');
-let mailabsent = document.getElementById('mailabsent');
 let prenom = document.getElementById('prenom');
-let prenomabsent = document.getElementById('prenomabsent');
 let confirm_bouton = document.getElementById('envoi');
 let nom = document.getElementById('nom');
-let nomabsent = document.getElementById('nomabsent');
 let nomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 let prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 let mailValid = /^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/;
@@ -147,50 +138,46 @@ confirm_bouton.addEventListener("click",function(event){
     //Il n'y a aucune valeur dans le champ (nom)
     if (nom.validity.valueMissing ){
         event.preventDefault();
-        nomabsent.textContent = '! Requis';
-        nomabsent.style.color = 'red';
+        nom.placeholder = '! Requis';
 
     //la valeurs est incorrect
     }else if (nomValid.test(nom.value) == false){
         event.preventDefault();
-        nomabsent.textContent = 'Format incorrect';
-        nomabsent.style.color = 'red';
+        nom.value = '';
+        nom.placeholder = '! Format incorrect';
+        
+        
     //Il n'y a aucune valeur dans le champ (prenom)
     }else if (prenom.validity.valueMissing ){
           event.preventDefault();
-          prenomabsent.textContent = '! Requis';
-          prenomabsent.style.color = 'red';
+          prenom.placeholder = '! Requis';
   
       //la valeurs est incorrect
       }else if (prenomValid.test(prenom.value) == false){
           event.preventDefault();
-          prenomabsent.textContent = 'Format incorrect';
-          prenomabsent.style.color = 'red';
-        
-       //la valeurs est incorrect
-        }else if (mailValid.test(mail.value) == false){
-          event.preventDefault();
-          mailabsent.textContent = 'Format incorrect';
-          mailabsent.style.color = 'red';
+          prenom.value = '';
+          prenom.placeholder = '! Format incorrect';
         
          //Il n'y a aucune valeur dans le champ (mail)
         }else if (mail.validity.valueMissing ){
           event.preventDefault();
-          mailabsent.textContent = '! Requis';
-          mailabsent.style.color = 'red';
+          mail.placeholder = '! Requis';
+
+           //la valeurs est incorrect
+        }else if (mailValid.test(mail.value) == false){
+          event.preventDefault();
+          mail.value = '';
+          mail.placeholder = '! Format incorrect';
 
          //Il n'y a aucune valeur dans le champ (adresse)
        }else if (adresse.validity.valueMissing ){
           event.preventDefault();
-          adresseabsent.textContent = '! Requis';
-          adresseabsent.style.color = 'red';
+          adresse.placeholder = '! Requis';
 
         //Il n'y a aucune valeur dans le champ (ville)
        }else if (ville.validity.valueMissing ){
         event.preventDefault();
-        villeabsent.textContent = '! Requis';
-        villeabsent.style.color = 'red';
-         
+        ville.placeholder = '! Requis';    
         
     }else{ 
          
@@ -271,35 +258,3 @@ let products = [];
 text_validation.append(article_balise);
 
 
-// affichage nombre d'article dans le panier sur l'icone panier
-
-let nombre_dans_panier = document.getElementById('nb_panier');
-const nb_Panier = document.createElement('p');
-
-if (couleur_du_panier === null || couleur_du_panier === "undefined"){
-
-nb_Panier.innerHTML = "";
-
-}else{
-class Compteur {
-  constructor() {
-    this.nb_article = 0;
-  }
-}
-  
-Compteur.prototype.ajouter = function() {
-  couleur_du_panier.forEach(function() {
-    ++this.nb_article;
-  },  this);
-};
-
-var obj = new Compteur();
-obj.ajouter([]);
-console.log(obj.nb_article);  
-
-nb_Panier.innerHTML = obj.nb_article;
-
-nombre_dans_panier.appendChild(nb_Panier);
-    
-
-}
