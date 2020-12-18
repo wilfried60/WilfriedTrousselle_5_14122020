@@ -23,7 +23,7 @@ let sup = document.getElementById(index +'-'+ nounours.id);
 let message_p = document.createElement('p');
 sup.addEventListener("click",function(){
 
-  message_p.innerHTML = 'voulez-vous vraiment supprimer cette article?\
+  message_p.innerHTML = 'voulez-vous vraiment supprimer cet article?\
  <button id="ouinon" class="choix_oui"><a href="./panier.html">Oui</a></button> \
  <a href="./panier.html"><button  class="choix_non">Non</button></a>';
 
@@ -50,21 +50,18 @@ affichage_du_panier.appendChild(message_p);
   class Compteur {
   constructor() {
     this.prixtotal = 0;
-    this.nb_article = 0;
   }
 }
   
 Compteur.prototype.ajouter = function() {
   couleur_du_panier.forEach(function(element) {
     this.prixtotal += element.prix * element.quantite;
-    ++this.nb_article;
   },  this);
 };
 
 var obj = new Compteur();
 obj.ajouter([]);
 console.log(obj.prixtotal); 
-console.log(obj.nb_article);  
     
     const total_prix = document.getElementById('total_prix');
     const total_prix_p = document.createElement('p');

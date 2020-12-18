@@ -16,9 +16,10 @@ class Compteur {
 }
   
 Compteur.prototype.ajouter = function() {
-  couleur_du_panier.forEach(function(element) {
-    ++this.nb_article;
-  },  this);
+  couleur_du_panier.forEach(function(Compteur_panier) {
+    this.nb_article += parseFloat(Compteur_panier.quantite) ;
+  },
+   this);
 };
 
 var obj = new Compteur();
