@@ -1,4 +1,4 @@
-// on affiche la couleur du panier s'il est plein
+
 let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
 
 let ourson = ""; 
