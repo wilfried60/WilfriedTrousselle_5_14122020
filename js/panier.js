@@ -1,5 +1,4 @@
 //// récuperation du panier dans local storage
-  let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
   if (couleur_du_panier === null || couleur_du_panier === "undefined"){
     couleur_du_panier = [];
   }else{

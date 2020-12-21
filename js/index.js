@@ -1,5 +1,5 @@
 
-let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
+
 
 let ourson = ""; 
 const affichagenounours = document.querySelector('#nounours');

@@ -1,5 +1,4 @@
 
-let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
 const affichagenounours = document.getElementById('nounours');
 const search_params = new URLSearchParams(window.location.search); 
 const id = search_params.get('id');

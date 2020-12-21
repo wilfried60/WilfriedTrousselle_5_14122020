@@ -1,6 +1,3 @@
-// on définie la variable pour le compteur panier (compteur.js);
-
-let couleur_du_panier = JSON.parse(localStorage.getItem("panier"));
 
 // on affiche la confirmation de commande
 
